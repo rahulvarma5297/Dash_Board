@@ -154,7 +154,7 @@ const Job = () => {
                     <td>{item.date}</td>
                     <td>
                       <a
-                        href={`/data/${item.job_ids}`}
+                        href={`/jobdetail/${item.job_ids}`}
                         style={{ color: "#6a00a8", fontWeight: "bold" }}
                       >
                         See more
