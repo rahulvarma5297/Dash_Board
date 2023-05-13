@@ -12,7 +12,7 @@ const Job = () => {
   const [datanotfound, setdatanotfound] = useState(true);
 
   const getUsers = async () => {
-    const response = await fetch("http://localhost:8080/data", {
+    const response = await fetch("https://backend-dashboard-jvc7.onrender.com/data", {
       method: "GET",
     });
 
