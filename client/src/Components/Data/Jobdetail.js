@@ -11,9 +11,12 @@ const Jobdetail = () => {
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
-    const response = await fetch(`https://backend-dashboard-jvc7.onrender.com/data/${id}`, {
-      method: "GET",
-    });
+    const response = await fetch(
+      `https://backend-dashboard-jvc7.onrender.com/data/${id}`,
+      {
+        method: "GET",
+      }
+    );
     const data = await response.json();
     console.log(data);
     setLoading(false);
@@ -26,8 +29,6 @@ const Jobdetail = () => {
   return (
     <div>
       <Navbar />
-
-      
 
       {loading ? (
         <Loading />

@@ -48,15 +48,17 @@ const Job = () => {
           <input
             className="admin"
             type="text"
-            placeholder="Search by company name"
+            placeholder="Search by Company"
             onChange={(e) => {
               const search = e.target.value.trimStart().trimEnd();
               setdatanotfound(true);
               const new_data = data.filter((item) => {
-                return item.company
-                  .toLowerCase()
-                  .includes(search.toLowerCase());
+                return (
+                  item.company &&
+                  item.company.toLowerCase().includes(search.toLowerCase())
+                );
               });
+
               if (new_data.length === 0) {
                 setdatanotfound(false);
               }
@@ -75,7 +77,7 @@ const Job = () => {
           }}
         >
           <input
-            className="admin2"
+            className="admin"
             type="text"
             placeholder="Search by title"
             onChange={(e) => {
@@ -102,7 +104,7 @@ const Job = () => {
           }}
         >
           <input
-            className="admin3"
+            className="admin"
             type="text"
             placeholder="Search by Location"
             onChange={(e) => {
@@ -159,7 +161,7 @@ const Job = () => {
                       <td>{item.locations}</td>
                       <td>{item.date}</td>
                       <td>
-                      <button
+                        <button
                           className="btn btn-primary"
                           style={{
                             backgroundColor: "#6a00a8",
@@ -170,7 +172,7 @@ const Job = () => {
                             navigate(`/jobdetail/${item.job_ids}`);
                           }}
                         >
-                        see more
+                          see more
                         </button>
                       </td>
                     </tr>
@@ -204,7 +206,7 @@ const Job = () => {
                             navigate(`/jobdetail/${item.job_ids}`);
                           }}
                         >
-                        see more
+                          see more
                         </button>
                       </td>
                     </tr>

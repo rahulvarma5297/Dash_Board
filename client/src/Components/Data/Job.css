@@ -42,11 +42,10 @@
   border-bottom: 2px solid #ebb02d;
 }
 
-.job-data-table table{
-    width: 100%;
-    font-size: large;
+.job-data-table table {
+  width: 100%;
+  font-size: large;
 }
-
 
 .search {
   width: 80%;
@@ -81,7 +80,7 @@
   padding-left: 5%;
   padding-right: 5%;
 }
-.box-in{
+.box-in {
   margin-right: 5%;
 }
 
