@@ -1,0 +1,76 @@
+.tour-item-box {
+  height: 100%;
+  margin: 7px 200px 15px 200px;
+  margin-bottom: 4rem;
+  border-radius: 25px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 7px 7px 7px 7px #1e1e1ea0;
+}
+
+.tour-item-box .tour-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.tour-item-box:hover {
+  box-shadow: 7px 7px 7px 7px #033747e3;
+}
+
+
+.trans-detail-tabledown {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  width: 20%;
+  height: 30%;
+}
+
+.trans-detail-tabledown p {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.trans-detail-tabledown p {
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+}
+
+p {
+  font-size: 23px;
+  font-weight: 500;
+  word-wrap: break-word; 
+
+}
+
+.trans-detail-tabledown2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  width: 80%;
+  height: 30%;
+}
+
+.trans-detail-tabledown2 p {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.trans-detail-tabledown2 p {
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+}
+

@@ -1,0 +1,86 @@
+.table-responsive {
+  overflow-x: auto;
+  margin: 5% 0;
+}
+
+.job-data-table {
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 1em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+.job-data-table thead tr {
+  background-color: #ebb02d;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.job-data-table th,
+.job-data-table td {
+  padding: 12px 15px;
+}
+
+.job-data-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.job-data-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  font-weight: bold;
+  color: #ebb02d;
+}
+
+.job-data-table tbody tr:last-of-type {
+  border-bottom: 2px solid #ebb02d;
+}
+
+.job-data-table table{
+    width: 100%;
+    font-size: large;
+}
+
+
+.search {
+  width: 80%;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search i {
+  margin: auto;
+  padding: 5px;
+  font-size: 25px;
+}
+
+.search input {
+  width: 100%;
+  border: 3px solid black;
+  padding: 20px;
+  height: 20px;
+  border-radius: 5px;
+  color: red;
+  font-size: 20px;
+}
+
+.admin {
+  text-transform: none;
+}
+
+.container-out {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.box-in{
+  margin-right: 5%;
+}
