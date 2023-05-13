@@ -12,9 +12,12 @@ const Job = () => {
   const [datanotfound, setdatanotfound] = useState(true);
 
   const getUsers = async () => {
-    const response = await fetch("https://backend-dashboard-jvc7.onrender.com/data", {
-      method: "GET",
-    });
+    const response = await fetch(
+      "https://backend-dashboard-jvc7.onrender.com/data",
+      {
+        method: "GET",
+      }
+    );
 
     const data = await response.json();
     setLoading(false);
@@ -121,79 +124,81 @@ const Job = () => {
         <Loading />
       ) : (
         <div className="table-responsive">
-        <div className="job-data-table">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Company</th>
-                <th>Title</th>
-                <th>Location</th>
-                <th>Date</th>
-                <th>Description</th>
-              </tr>
-            </thead>
+          <div className="job-data-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Company</th>
+                  <th>Title</th>
+                  <th>Location</th>
+                  <th>Date</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
 
-            {datanotfound ? (
-              state.length === 0 ? (
-                data.map((item) => (
-                  <tr key={item._id}>
-                    <td>{item.job_ids}</td>
+              {datanotfound ? (
+                state.length === 0 ? (
+                  data.map((item) => (
+                    <tr key={item._id}>
+                      <td>{item.job_ids}</td>
 
-                    <td>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        style={{ color: "#6a00a8", fontWeight: "bold" }}
-                      >
-                        {item.company}
-                      </a>
-                    </td>
-                    <td>{item.title}</td>
-                    <td>{item.locations}</td>
-                    <td>{item.date}</td>
-                    <td>
-                      <a
-                        href={`/jobdetail/${item.job_ids}`}
-                        style={{ color: "#6a00a8", fontWeight: "bold" }}
-                      >
-                        See more
-                      </a>
-                    </td>
-                  </tr>
-                ))
+                      <td>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{ color: "#6a00a8", fontWeight: "bold" }}
+                        >
+                          {item.company}
+                        </a>
+                      </td>
+                      <td>{item.title}</td>
+                      <td>{item.locations}</td>
+                      <td>{item.date}</td>
+                      <td>
+                        <a
+                          href={`/jobdetail/${item.job_ids}`}
+                          style={{ color: "#6a00a8", fontWeight: "bold" }}
+                        >
+                          See more
+                        </a>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  state.map((item) => (
+                    <tr key={item._id}>
+                      <td>{item.job_ids}</td>
+                      <td>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{ color: "#6a00a8", fontWeight: "bold" }}
+                        >
+                          {item.company}
+                        </a>
+                      </td>
+                      <td>{item.title}</td>
+                      <td>{item.locations}</td>
+                      <td>{item.date}</td>
+                      <td>
+                        <a
+                          href={`/jobdetail/${item.job_ids}`}
+                          style={{ color: "#6a00a8", fontWeight: "bold" }}
+                        >
+                          See more
+                        </a>
+                      </td>
+                    </tr>
+                  ))
+                )
               ) : (
-                state.map((item) => (
-                  <tr key={item._id}>
-                    <td>{item.job_ids}</td>
-                    <td>
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        style={{ color: "#6a00a8", fontWeight: "bold" }}
-                      >
-                        {item.company}
-                      </a>
-                    </td>
-                    <td>{item.title}</td>
-                    <td>{item.locations}</td>
-                    <td>{item.date}</td>
-                    <td>
-                      <a
-                        href={`/jobdetail/${item.job_ids}`}
-                        style={{ color: "#6a00a8", fontWeight: "bold" }}
-                      >
-                        See more
-                      </a>
-                    </td>
-                  </tr>
-                ))
-              )
-            ) : (
-              <h2> Data Not Found </h2>
-            )}
-          </table>
-        </div>
+                <h2> Data Not Found </h2>
+              )}
+            </table>
+          </div>
         </div>
       )}
     </div>
