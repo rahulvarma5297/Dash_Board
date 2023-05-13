@@ -16,6 +16,10 @@ app.use(cors());
 
 const cli = new mongoose.mongo.MongoClient(url);
 
+app.get("/", (req, res) => {
+  res.send("Hello World!, /data to get data");
+});
+
 app.get("/data", async (req, res) => {
   try {
     await mongoose.connect(url);
