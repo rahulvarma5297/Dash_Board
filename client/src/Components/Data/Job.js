@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Loading from "../Loading/Loading";
 import Navbar from "../Navbar/Navbar";
 import "./Job.css";
 
 const Job = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -157,12 +159,19 @@ const Job = () => {
                       <td>{item.locations}</td>
                       <td>{item.date}</td>
                       <td>
-                        <a
-                          href={`/jobdetail/${item.job_ids}`}
-                          style={{ color: "#6a00a8", fontWeight: "bold" }}
+                      <button
+                          className="btn btn-primary"
+                          style={{
+                            backgroundColor: "#6a00a8",
+                            color: "white",
+                            fontWeight: "bold",
+                          }}
+                          onClick={() => {
+                            navigate(`/jobdetail/${item.job_ids}`);
+                          }}
                         >
-                          See more
-                        </a>
+                        see more
+                        </button>
                       </td>
                     </tr>
                   ))
@@ -184,12 +193,19 @@ const Job = () => {
                       <td>{item.locations}</td>
                       <td>{item.date}</td>
                       <td>
-                        <a
-                          href={`/jobdetail/${item.job_ids}`}
-                          style={{ color: "#6a00a8", fontWeight: "bold" }}
+                        <button
+                          className="btn btn-primary"
+                          style={{
+                            backgroundColor: "#6a00a8",
+                            color: "white",
+                            fontWeight: "bold",
+                          }}
+                          onClick={() => {
+                            navigate(`/jobdetail/${item.job_ids}`);
+                          }}
                         >
-                          See more
-                        </a>
+                        see more
+                        </button>
                       </td>
                     </tr>
                   ))
