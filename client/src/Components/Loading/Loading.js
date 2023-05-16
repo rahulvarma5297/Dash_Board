@@ -17,6 +17,17 @@ const Loading = () => {
         </span>
       </h2>
 
+      <h2>
+        <span role="img" aria-label="emoji">
+          🤔
+        </span>
+        <a href="https://backend-dashboard-jvc7.onrender.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click on this to activate the backend in new tab
+        </a>
+      </h2>
       <div className="lds-roller">
         <div></div>
         <div></div>

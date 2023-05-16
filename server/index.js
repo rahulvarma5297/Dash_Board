@@ -17,7 +17,7 @@ app.use(cors());
 const cli = new mongoose.mongo.MongoClient(url);
 
 app.get("/", (req, res) => {
-  res.send("Hello World!, /data to get data");
+  res.send("Back End Activated, Good to Go!, /data to get data");
 });
 
 app.get("/data", async (req, res) => {
